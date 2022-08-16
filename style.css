@@ -1,0 +1,74 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+*,input {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  border: none;
+}
+.dropdownContainer {
+  --dpBg: #101010;
+  --dpHover: dodgerblue;
+  --dpColor: white;
+  padding: 20px;
+  position:relative;
+}
+.dropdownControl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 5px;
+  background: var(--dpBg);
+  width: 250px;
+  padding: 10px;
+}
+.dropdownControl input {
+  color: var(--dpColor);
+  background: transparent;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  display: block;
+  width: 90%;
+}
+.dropdown-icon {
+  color: var(--dpColor);
+  font-size: 1.3rem;
+  margin: 0px 5px;
+}
+.dropdown {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--dpBg);
+  color: var(--dpColor);
+  position: absolute;
+  top: 80px;
+  border-radius: 5px;
+  font-size: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+  width: 250px;
+  max-height: 200px;
+  transition: 0.3s;
+}
+.dropdown-active {
+  display: block;
+}
+.dropdown .option {
+  margin: 0px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 0px;
+  display: block;
+  transition: 0.5s background;
+}
+.dropdown .option:hover {
+  background: var(--dpHover);
+}
+.dropdown .option .icon {
+  padding: 5px;
+}
